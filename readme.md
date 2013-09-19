@@ -27,8 +27,8 @@ Maintainable Document XML Conversion
 
 In Rice 2.0 some properties on maintainable objects have been changed/removed which can cause issues opening older maintenance documents since those documents contain invalid XML. This converter handles this situation and transforms the XML which is stored in the maintenance document table before XStream parses it for display on the page to help resolve this problem. If your maintainable classes have changed during an upgrade to Kuali Rice 2.x you may need to add some additional configuration to get your maintenance documents to work properly. This consists of two parts:
 
-# Create a file with the conversion rules for how to convert the maintainable document XML (see below for an example).
-# Modify the "maintainable.conversion.rule.file" configuration parameter to point to your XML file with the conversion rules.
+1. Create a file with the conversion rules for how to convert the maintainable document XML (see below for an example).
+2. Modify the "maintainable.conversion.rule.file" configuration parameter to point to your XML file with the conversion rules.
 
 Note: If your maintainables haven't changed during the upgrade it is likely that you will not need to do any additional configuration for your older maintenance documents to work properly.
 
@@ -37,8 +37,8 @@ Maintainable XML conversion rule file
 
 This file contains two types of mappings:
 
-# Maintainable implementation class in 1.x to the implementation class in 2.x
-# A mapping of a 2.x maintainable implementation class to a map of property names which have changed between the 1.x and 2.x versions.
+1. Maintainable implementation class in 1.x to the implementation class in 2.x
+2. A mapping of a 2.x maintainable implementation class to a map of property names which have changed between the 1.x and 2.x versions.
 
 For example, say you had the following class which you use for a maintainable object with Rice 1.0.3:
 
